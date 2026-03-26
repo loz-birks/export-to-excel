@@ -1,3 +1,7 @@
 # here I use the mtcars dataframe but you could import or generate your own
-# or use a function to create datasets
-df <- mtcars
+data_fn <- function(cc){
+  df <- mtcars %>% 
+    filter(cyl == cc)
+  
+  return(df)
+}
