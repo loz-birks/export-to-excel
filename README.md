@@ -1,47 +1,29 @@
-# Report Name
-
-**Status:** Active / Retired
-
-**Latest Version:** v0.0.0
-
-**Transitioned to UDAL:** Y/N
-
-**Mini team:** Which mini team produces the report
-
-**Subject area:** Specific subject area
-
-**Contact:** Who to contact with questions
+# Exporting charts and data to Excel 
 
 ## Overview
 
-**Purpose:** Describe what this report does
+**Purpose:** A quick guide to dynamically add plots and data to excel sheets. I have not added any formatting to the workbook but details about how to do this can be found in the `openxlsx` package documentation e.g. [see here](https://ycphs.github.io/openxlsx/articles/Introduction.html). 
 
-**Audience:** Describe who the report is for
+## Repo Structure
 
-**Frequency:** How often is it refreshed
+```         
+se-provider-page/
+├── helper/
+│   └── generate_df.R 
+│   └── generate_plot.R 
+│   └── load_libraries.R 
+├── outputs/ [probably add this folder to the .gitignore in your own iterations]
+│   └── ...
+└── README.md
+└── run_file.R 
+└── export-to-excel.Rproj
+```
+### File Summary
 
-**Output type:** Slides, excel, markdown, dashboard, etc.
+|            |                 |                                                                                                                                                                     |
+|------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| helper/ | generate_df.R | Defines a function which takes a cylinder number as input and filters the data to that subset                                                 |
+| helper/ | generate_plot.R | Defines a function which takes a cylinder number as input and generates a scatter plot of MPG against Weight                                                         |
+| helper/     | load_libraries.R    | Loads all required libraries                                       |
+| run_file/     | run_file.R     | Is the main file, sources necessary scripts and then creates an excel output for all input cyclinder values |
 
-## Data Sources
-
-Detail data sources included in this report.
-
-## Quality Assurance, Standards and Reporting (QASAR)
-
-### Latest QA
-
-**QA Level:** Silver/Gold
-
-**QA Completed By:** Who conducted the QA
-
-**QA Completion Date:** When was the QA conducted
-
-### Sign Off
-
-**Sign Off By:** Which SLT member signed off this work
-
-**Sign Off Date:** When was this work signed off
-
-## SOP
-
-The SOP can be found in the guidance folder of this repository.
