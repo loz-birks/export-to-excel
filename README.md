@@ -12,7 +12,7 @@ se-provider-page/
 │   └── generate_df.R 
 │   └── generate_plot.R 
 │   └── load_libraries.R 
-├── outputs/ [probably add this folder to the .gitignore in your own iterations
+├── outputs/ [probably add this folder to the .gitignore in your own iterations]
 │   └── ...
 └── README.md
 └── run_file.R 
