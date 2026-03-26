@@ -23,12 +23,14 @@ for (i in c(4, 6, 8)){
   
   # 3. add the plot
   # print the plot 
-  print(plot_fn(i))
+  p <- plot_fn(i)
+  print(p)
   # put it in the excel
   insertPlot(wb, sheet_name, 
              width = 5, height = 4, units = "in", 
              # specify where the plot should be (here I move it relative to the data)
              startRow = 1, startCol = ncol(data) + 2)
+
   
 }
 
